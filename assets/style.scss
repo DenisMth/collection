@@ -1,0 +1,57 @@
+@import "__reset.scss";
+@import "__fontStyle.scss";
+
+h1 {
+    text-align:center;
+    background-color: lime;
+    width:fit-content;
+    border-radius : 2rem;
+    margin : auto;
+    margin-top : 2rem;
+    margin-bottom : 1rem;
+    padding : 1rem 2rem 1rem 2rem;
+    
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main{
+    display : flex;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+    gap : 1rem;
+    margin-left:1.5rem;
+    margin-right:1.5rem;
+    
+}
+
+.card{
+    width : 20rem;
+    background-color: red;
+    border-radius: 2rem;
+    padding : 1rem;
+
+    &__title{
+
+    }
+    &__picture{
+        width : 100%;
+    }
+    &__genre{
+        display:flex;
+        gap:1rem;
+        &__type{
+            background-color: yellow;
+            border-radius: 2rem;
+            padding:0.5rem 1rem 0.5rem 1rem;
+        }
+        &__type:hover{
+            background-color:yellowgreen;
+            cursor:pointer;
+        }
+    }
+}
