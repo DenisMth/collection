@@ -29,9 +29,14 @@ h1 {
   font-weight: bold;
 }
 
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 h1 {
   text-align: center;
-  background-color: lime;
+  background-color: rgb(4, 216, 4);
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 2rem;
@@ -45,6 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: rgb(63, 63, 63);
 }
 
 main {
@@ -58,16 +64,25 @@ main {
 
 .card {
   width: 20rem;
-  background-color: red;
+  background-color: rgb(182, 5, 5);
   border-radius: 2rem;
   padding: 1rem;
 }
+.card__title {
+  text-align: center;
+}
 .card__picture {
-  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 28rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .card__genre {
   display: flex;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 .card__genre__type {
   background-color: yellow;
@@ -77,4 +92,7 @@ main {
 .card__genre__type:hover {
   background-color: yellowgreen;
   cursor: pointer;
+}
+.card__cast {
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=style.css.map */

@@ -107,10 +107,10 @@ for (elem of collection) {
 
 
 
-    const newImage = document.createElement("img");
-    newImage.src = elem.picture;
+    const newImage = document.createElement("div");
     newImage.className = "card__picture";
     newCard.appendChild(newImage);
+    newImage.style.backgroundImage = `url(${elem.picture})`;
 
     const newGenre = document.createElement("div");
     newGenre.className = "card__genre";
