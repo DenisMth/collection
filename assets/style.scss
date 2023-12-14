@@ -1,24 +1,23 @@
 @import "__reset.scss";
-@import "__fontStyle.scss";
 @import "__variables.scss";
-
-h1 {
-    text-align:center;
-    background-color: $titleBackground;
-    width:fit-content;
-    border-radius : 2rem;
-    margin : auto;
-    margin-top : 2rem;
-    margin-bottom : 1rem;
-    padding : 1rem 2rem 1rem 2rem;
-    
-}
+@import "__fontStyle.scss";
 
 body{
     display:flex;
     flex-direction: column;
     justify-content: center;
     background-color:$bodyBackground;
+}
+
+h1 {
+    text-align:center;
+    background-color: $titleBackground;
+    width:fit-content;
+    margin : auto;
+    margin-top : 2rem;
+    margin-bottom : 3rem;
+    padding : 1rem 2rem 1rem 2rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem;    
 }
 
 main{
@@ -31,11 +30,24 @@ main{
     
 }
 
+a{
+    text-decoration: none;
+    &:visited{
+        color:black;
+    }
+}
+
 .card{
     width : 20rem;
     background-color: $cardBackground;
-    border-radius: 2rem;
     padding : 1rem;
+    box-shadow: 0.3rem 0.3rem 0.3rem;
+    margin-bottom: 1rem;
+    transition:all .3s;
+
+    &:hover{
+        transform : scale(1.05);
+    }
 
     &__title{
         text-align: center;
@@ -44,9 +56,47 @@ main{
         background-size:cover;
         background-repeat: no-repeat;
         background-position: center;
-        height:28rem;
+        height:12rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
+        position:relative;
+        
+        &__menu{
+            position:absolute;
+            overflow:hidden;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            bottom:0;
+            height:0;
+            width:100%;
+            background-color: rgb(155, 154, 154);
+            opacity:0.9;
+            transition:all .5s;
+            &__link{
+                display:flex;
+                align-items: center;
+                margin-right: 1rem;
+                margin-left: 1rem;
+                gap :1rem;
+                &__icon{
+                    width : 5rem;
+                    height: 5rem;
+                    transition:all .2s;
+                    &:hover{
+                        filter: invert(9%) sepia(94%) saturate(6202%) hue-rotate(2deg) brightness(103%) contrast(112%);
+                    }
+                }
+                
+            }
+        }
+        &:hover{
+            .card__picture__menu{
+                bottom:0;
+                height:6rem;
+                margin:auto;
+            }
+        }
     }
     &__genre{
         display:flex;
@@ -56,13 +106,33 @@ main{
             background-color: $genreBackground;
             border-radius: 2rem;
             padding:0.5rem 1rem 0.5rem 1rem;
+            transition:all .3s;
+            &:hover{
+                color : $genreHoverColor;
+                background-color:$genreHoverBackground;
+                cursor:pointer;
+            }
         }
-        &__type:hover{
-            background-color:$genreHoverBackground;
-            cursor:pointer;
-        }
+        
     }
+    &__director{
+    
+    }
+
     &__cast{
+        margin-top:1rem;
         margin-bottom: 1rem;
+        &__title{
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom:0.5rem;
+        }
     }
+    &__release{
+        color : $release;
+    }
+}
+
+.card__picture__menu__link{
+    display:flex;
 }

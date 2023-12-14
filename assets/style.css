@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,8 +21,9 @@ time, mark, audio, video {
 }
 
 body {
-  font-family: "Agency FB", sans-serif;
-  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: rgb(62, 42, 2);
 }
 
 h1 {
@@ -34,23 +36,23 @@ h2 {
   font-weight: bold;
 }
 
-h1 {
-  text-align: center;
-  background-color: rgb(4, 216, 4);
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 2rem;
-  margin: auto;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  padding: 1rem 2rem 1rem 2rem;
-}
-
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(63, 63, 63);
+  background-color: rgb(218, 218, 218);
+}
+
+h1 {
+  text-align: center;
+  background-color: rgb(223, 188, 72);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  padding: 1rem 2rem 1rem 2rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem;
 }
 
 main {
@@ -62,11 +64,23 @@ main {
   margin-right: 1.5rem;
 }
 
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+
 .card {
   width: 20rem;
-  background-color: rgb(182, 5, 5);
-  border-radius: 2rem;
+  background-color: white;
   padding: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
 }
 .card__title {
   text-align: center;
@@ -75,9 +89,43 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 28rem;
+  height: 12rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  position: relative;
+}
+.card__picture__menu {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: rgb(155, 154, 154);
+  opacity: 0.9;
+  transition: all 0.5s;
+}
+.card__picture__menu__link {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  gap: 1rem;
+}
+.card__picture__menu__link__icon {
+  width: 5rem;
+  height: 5rem;
+  transition: all 0.2s;
+}
+.card__picture__menu__link__icon:hover {
+  filter: invert(9%) sepia(94%) saturate(6202%) hue-rotate(2deg) brightness(103%) contrast(112%);
+}
+.card__picture:hover .card__picture__menu {
+  bottom: 0;
+  height: 6rem;
+  margin: auto;
 }
 .card__genre {
   display: flex;
@@ -85,14 +133,29 @@ main {
   margin-bottom: 1rem;
 }
 .card__genre__type {
-  background-color: yellow;
+  background-color: lightgray;
   border-radius: 2rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
+  transition: all 0.3s;
 }
 .card__genre__type:hover {
-  background-color: yellowgreen;
+  color: white;
+  background-color: gray;
   cursor: pointer;
 }
 .card__cast {
+  margin-top: 1rem;
   margin-bottom: 1rem;
+}
+.card__cast__title {
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+}
+.card__release {
+  color: rgb(130, 130, 130);
+}
+
+.card__picture__menu__link {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

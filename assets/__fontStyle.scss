@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: "Agency FB", sans-serif;
-    font-size : 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size : 16px;
+    color : $fontColor;
 }
 
 h1{
