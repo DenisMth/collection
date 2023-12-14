@@ -136,3 +136,24 @@ a{
 .card__picture__menu__link{
     display:flex;
 }
+
+footer{
+    font-size:bold;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:2rem;
+    height:20rem;
+    background-color: $footerBackground;
+}
+
+.footerLink{
+    text-transform: uppercase;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    background-color: $titleBackground;
+    &:hover{
+        color:$genreHoverColor;
+        box-shadow: 0.2rem 0.2rem 0.2rem $fontColor;
+    }
+}

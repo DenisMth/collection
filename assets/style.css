@@ -36,6 +36,18 @@ h2 {
   font-weight: bold;
 }
 
+footer {
+  font-size: 64px;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+  }
+  footer {
+    font-size: 42px;
+  }
+}
 body {
   display: flex;
   flex-direction: column;
@@ -158,4 +170,25 @@ a:visited {
 
 .card__picture__menu__link {
   display: flex;
+}
+
+footer {
+  font-size: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  height: 20rem;
+  background-color: rgb(130, 130, 130);
+}
+
+.footerLink {
+  text-transform: uppercase;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  background-color: rgb(223, 188, 72);
+}
+.footerLink:hover {
+  color: white;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgb(62, 42, 2);
 }/*# sourceMappingURL=style.css.map */

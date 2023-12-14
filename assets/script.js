@@ -214,6 +214,11 @@ const collection = [
     */
 ];
 
+//const newButtonBlock = document.createElement("div");
+//newButtonBlock.className = "buttonBlock";
+
+//header.appendChild(newButtonBlock);
+
 
 for (elem of collection) {
     const newCard = document.createElement("div");
