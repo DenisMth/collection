@@ -10,7 +10,7 @@ categories.push(collection[0].genre[0]);
 
 
 
-for (elem of collection) {
+for (let elem of collection) {
     const newCard = document.createElement("div");
     newCard.className = "card card__block";
     const main = document.body.querySelector("main");
