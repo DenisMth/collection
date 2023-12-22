@@ -1,4 +1,4 @@
-import {collection} from "./collection.js";
+import {collection as collection} from "./collection.js";
 
 const newButtonBlock = document.createElement("div");
 newButtonBlock.className = "buttonBlock";
@@ -47,14 +47,14 @@ for (let elem of collection) {
     const newGenre = document.createElement("div");
     newGenre.className = "card__genre";
     newCard.appendChild(newGenre);
-    for (iteration of elem.genre) {
+    for (let iteration of elem.genre) {
         const newGenreType = document.createElement("p");
         const newGenreTypeContent = document.createTextNode(iteration);
         newGenreType.appendChild(newGenreTypeContent);
         newGenreType.className = "card__genre__type";
         newGenre.appendChild(newGenreType);
 
-        for (type of categories){
+        for (let type of categories){
             if (!categories.includes(iteration)){
                 categories.push(iteration);
             }
@@ -77,7 +77,7 @@ for (let elem of collection) {
     newCastTitle.className = "card__cast__title";
     newCast.appendChild(newCastTitle);
 
-    for (iteration of elem.cast) {
+    for (let iteration of elem.cast) {
         const newCastMember = document.createElement("p");
         const newCastMemberContent = document.createTextNode(iteration);
         newCastMember.appendChild(newCastMemberContent);
@@ -95,14 +95,14 @@ for (let elem of collection) {
 }
 
 
-for (type of categories){
+for (let type of categories){
     const newButton = document.createElement("button");
     newButton.className = "buttonBlock__button";
     const newButtonContent = document.createTextNode(type);
     newButton.appendChild(newButtonContent);
     newButtonBlock.appendChild(newButton);
     newButton.addEventListener("click", (event) =>{
-        for (elem of collection){
+        for (let elem of collection){
             if (!elem.genre.includes(type)){
                 const carte = document.body.querySelectorAll("main.card");
                 carte.style.display = "none";
