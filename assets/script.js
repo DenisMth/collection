@@ -2,6 +2,7 @@ import * as myCollection from "./collection.js";
 const collection = myCollection.collection;
 console.log(collection);
 
+
 const newButtonBlock = document.createElement("div");
 newButtonBlock.className = "buttonBlock";
 const header = document.body.querySelector("header");
