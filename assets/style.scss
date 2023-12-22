@@ -9,6 +9,26 @@ body{
     background-color:$bodyBackground;
 }
 
+.buttonBlock{
+    display:flex;
+    gap: 0.5rem;
+    margin-bottom : 3rem;
+    margin-left : 2rem;
+    &__button{
+        background-color:$genreBackground;
+        padding : 0.5rem 1rem 0.5rem 1rem;
+        border-radius: 2rem;
+        border:none;
+        font-family: 'Roboto', sans-serif;;
+        transition:all .3s;
+        &:hover{
+            background-color:$genreHoverBackground;
+            color:$genreHoverColor;
+            cursor:pointer;
+        }
+    }
+}
+
 h1 {
     text-align:center;
     background-color: $titleBackground;
@@ -152,6 +172,7 @@ footer{
     padding-right: 2rem;
     padding-left: 2rem;
     background-color: $titleBackground;
+    transition:all .2s;
     &:hover{
         color:$genreHoverColor;
         box-shadow: 0.2rem 0.2rem 0.2rem $fontColor;

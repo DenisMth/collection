@@ -1,223 +1,13 @@
-const collection = [
-    {
-        name: "Iron Man",
-        director: "Jon Favreau",
-        releaseYear: "2008",
-        picture: "assets/images/Iron_Man.jpg",
-        genre: ["Action", "Super-heroes"],
-        cast: [
-            "Robert Downey Jr.",
-            "Gwyneth Paltrow",
-            "Terrence Howard",
-            "Jeff Bridges",
-            "Shaun Toub",
-        ],
-        link: "https://www.youtube.com/watch?v=8ugaeA-nMTc",
-    },
+import {collection} from "./collection.js";
 
-    {
-        name: "The Incredible Hulk",
-        director: "Louis Leterrier",
-        releaseYear: "2008",
-        picture: "assets/images/Incredible_Hulk.jpg",
-        genre: ["Action", "Super-heroes"],
-        cast: [
-            "Edward Norton",
-            "Liv Tyler",
-            "Tim Roth",
-            "William Hurt",
-            "Tim Blake Nelson",
-        ],
-        link: "https://www.youtube.com/watch?v=xbqNb2PFKKA",
-    },
+const newButtonBlock = document.createElement("div");
+newButtonBlock.className = "buttonBlock";
+const header = document.body.querySelector("header");
+header.appendChild(newButtonBlock);
+let categories = [];
+categories.push(collection[0].genre[0]);
 
-    {
-        name: "Iron Man 2",
-        director: "Jon Favreau",
-        releaseYear: "2010",
-        picture: "assets/images/Iron_Man_2.jpg",
-        genre: ["Action", "Super-heroes"],
-        cast: [
-            "Robert Downey Jr.",
-            "Gwyneth Paltrow",
-            "Don Cheadle",
-            "Mickey Rourke",
-            "Samuel L. Jackson",
-        ],
-        link:"https://www.youtube.com/watch?v=qsRZghNciIo",
-    },
 
-    {
-        name: "Thor",
-        director: "Kenneth Branagh",
-        releaseYear: "2011",
-        picture: "assets/images/Thor.jpg",
-        genre: ["Science-Fiction", "Super-heroes"],
-        cast: [
-            "Chris Hemsworth",
-            "Natalie Portman",
-            "Tom Hiddleston",
-            "Anthony Hopkins",
-            "Stellan Skarsgård",
-        ],
-        link:"https://www.youtube.com/watch?v=w1k59SJ_-Uo",
-    },
-
-    {
-        name: "Captain America : First Avenger",
-        director: "Joe Johnston",
-        releaseYear: "2011",
-        picture: "assets/images/Captain_America_First_Avenger.jpg",
-        genre: ["Action", "Super-heroes"],
-        cast: [
-            "Chris Evans",
-            "Hugo Weaving",
-            "Hayley Atwell",
-            "Stanley Tucci",
-            "Tommy Lee Jones",
-        ],
-        link: "https://www.youtube.com/watch?v=qi5UTD7kEr0",
-    },
-
-    {
-        name: "Avengers",
-        director: "Joss Whedon",
-        releaseYear: "2012",
-        picture: "assets/images/Avengers.jpg",
-        genre: ["Science-Fiction", "Super-heroes"],
-        cast: [
-            "Robert Downey Jr.",
-            "Chris Evans",
-            "Mark Ruffalo",
-            "Chris Hemsworth",
-            "Scarlett Johansson",
-            "Jeremy Renner",
-            "Samuel L. Jackson",
-        ],
-        link: "https://www.youtube.com/watch?v=sXT4uBpGxNY",
-    },
-
-    {
-        name: "Iron Man 3",
-        director: "Shane Black",
-        releaseYear: "2013",
-        picture: "assets/images/Iron_Man_3.jpg",
-        genre: ["Action", "Super-heroes"],
-        cast: [
-            "Robert Downey Jr.",
-            "Gwyneth Paltrow",
-            "Guy Pearce",
-            "Ben Kingsley",
-            "Don Cheadle",
-        ],
-        link: "https://www.youtube.com/watch?v=Ke1Y3P9D0Bc",
-    },
-
-    {
-        name: "Thor : The Dark World",
-        director: "Alan Taylor",
-        releaseYear: "2013",
-        picture: "assets/images/Thor_Dark_World.jpg",
-        genre: ["Super-heroes"],
-        cast: [
-            "Chris Hemsworth",
-            "Natalie Portman",
-            "Tom Hiddleston",
-            "Anthony Hopkins",
-            "Idris Elba",
-        ],
-        link: "https://www.youtube.com/watch?v=npvJ9FTgZbM",
-    },
-
-    {
-        name: "Captain America : The Winter Soldier",
-        director: "Anthony and Joe Russo",
-        releaseYear: "2014",
-        picture: "assets/images/Captain_America_Winter_Soldier.jpg",
-        genre: ["Action", "Super-heroes"],
-        cast: [
-            "Chris Evans",
-            "Scarlett Johansson",
-            "Sebastian Stan",
-            "Anthony Mackie",
-            "Samuel L. Jackson",
-        ],
-        link: "https://www.youtube.com/watch?v=tbayiPxkUMM",
-    },
-
-    {
-        name: "Guardians of the Galaxy",
-        director: "James Gunn",
-        releaseYear: "2014",
-        picture: "assets/images/Guardians_of_the_Galaxy.jpg",
-        genre: ["Science-Fiction", "Super-héros"],
-        cast: [
-            "Chris Pratt",
-            "Zoe Saldana",
-            "David Bautista",
-            "Vin Diesel",
-            "Bradley Cooper",
-        ],
-        link: "https://www.youtube.com/watch?v=d96cjJhvlMA",
-    },
-
-    {
-        name: "Avengers : Age of Ultron",
-        director: "Joss Whedon",
-        releaseYear: "2015",
-        picture: "assets/images/Avengers_Age_of_Ultron.jpg",
-        genre: ["Action", "Super-héros"],
-        cast: [
-            "Robert Downey Jr.",
-            "Chris Evans",
-            "Mark Ruffalo",
-            "Chris Hemsworth",
-            "Scarlett Johansson",
-            "Jeremy Renner",
-        ],
-        link: "https://www.youtube.com/watch?v=tmeOjFno6Do",
-    },
-
-    {
-        name: "Ant-Man",
-        director: "Peyton Reed",
-        releaseYear: "2015",
-        picture: "assets/images/Ant-Man.jpg",
-        genre: ["Action", "Super-héros"],
-        cast: [
-            "Paul Rudd",
-            "Evangeline Lilly",
-            "Michael Douglas",
-            "Corey Stoll",
-            "Bobby Cannavale",
-        ],
-        link: "https://www.youtube.com/watch?v=pWdKf3MneyI",
-    },
-
-    /*
-    {
-        name: "",
-        director: "",
-        releaseYear: "",
-        picture: "assets/images/.jpg",
-        genre: ["Science-Fiction", "Super-héros"],
-        cast: [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-        ],
-        link: "",
-    },
-    */
-];
-
-//const newButtonBlock = document.createElement("div");
-//newButtonBlock.className = "buttonBlock";
-
-//header.appendChild(newButtonBlock);
 
 
 for (elem of collection) {
@@ -263,6 +53,12 @@ for (elem of collection) {
         newGenreType.appendChild(newGenreTypeContent);
         newGenreType.className = "card__genre__type";
         newGenre.appendChild(newGenreType);
+
+        for (type of categories){
+            if (!categories.includes(iteration)){
+                categories.push(iteration);
+            }
+        }
     }
 
     const newDirector = document.createElement("p");
@@ -296,4 +92,21 @@ for (elem of collection) {
     newCard.appendChild(newRelease);
 
 
+}
+
+
+for (type of categories){
+    const newButton = document.createElement("button");
+    newButton.className = "buttonBlock__button";
+    const newButtonContent = document.createTextNode(type);
+    newButton.appendChild(newButtonContent);
+    newButtonBlock.appendChild(newButton);
+    newButton.addEventListener("click", (event) =>{
+        for (elem of collection){
+            if (!elem.genre.includes(type)){
+                const carte = document.body.querySelectorAll("main.card");
+                carte.style.display = "none";
+            }
+        }
+    })
 }

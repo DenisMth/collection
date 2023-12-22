@@ -55,6 +55,26 @@ body {
   background-color: rgb(218, 218, 218);
 }
 
+.buttonBlock {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+}
+.buttonBlock__button {
+  background-color: rgb(193, 191, 191);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 2rem;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.3s;
+}
+.buttonBlock__button:hover {
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}
+
 h1 {
   text-align: center;
   background-color: rgb(223, 188, 72);
@@ -145,7 +165,7 @@ a:visited {
   margin-bottom: 1rem;
 }
 .card__genre__type {
-  background-color: lightgray;
+  background-color: rgb(193, 191, 191);
   border-radius: 2rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   transition: all 0.3s;
@@ -187,6 +207,7 @@ footer {
   padding-right: 2rem;
   padding-left: 2rem;
   background-color: rgb(223, 188, 72);
+  transition: all 0.2s;
 }
 .footerLink:hover {
   color: white;
