@@ -1,4 +1,6 @@
-import collection from "./collection.js";
+import * as myCollection from "./collection.js";
+
+let collection = myCollection.collection;
 
 const newButtonBlock = document.createElement("div");
 newButtonBlock.className = "buttonBlock";
