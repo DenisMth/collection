@@ -1,6 +1,6 @@
 import * as myCollection from "./collection.js";
 const collection = myCollection.collection;
-coneole.log(collection);
+console.log(collection);
 
 const newButtonBlock = document.createElement("div");
 newButtonBlock.className = "buttonBlock";
