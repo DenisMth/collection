@@ -1,7 +1,4 @@
-import * as myCollection from "./collection.js";
-const collection = myCollection.collection;
-console.log(collection);
-
+import collection from "./collection.js";
 
 const newButtonBlock = document.createElement("div");
 newButtonBlock.className = "buttonBlock";
@@ -9,8 +6,6 @@ const header = document.body.querySelector("header");
 header.appendChild(newButtonBlock);
 let categories = [];
 categories.push(collection[0].genre[0]);
-
-
 
 
 for (let elem of collection) {
